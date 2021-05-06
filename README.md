@@ -57,12 +57,24 @@ As a user I want:
 
  ### Wireframes
 
- [Welcome Page](wireframes/landing_page.png)
+ ![Welcome Page](wireframes/landing_page.png)
 
- [Dietary Choice](wireframes/diet_choice.png)
+ - The user will be welcomed with a beautiful full size image and the words Welcome on screen. By clicking the arrow at the bottom or scrolling down they will move on to the next step.
 
- [Tutorial](wireframes/tutorial.png)
+ ![Dietary Choice](wireframes/diet_choice.png)
+
+ - In this step the user chooses their preferred dietary option so the planner is customised for them. Once chosen the page will take them to the main page were a tutorial will show them how to use the website.
+
+ ![Tutorial](wireframes/tutorial.png)
+
+ - The tutorial will highlight each section and explain to the user step by step how to use the planner. Returning users will have an option to skip the tutorial. 
   
- [Main Page](wireframes/main_page.png)
+ ![Main Page](wireframes/main_page.png)
 
- [Calendar Printout](wireframes/calendar_printout.png)
+ - In the mobile and tablet version the customer will be able to move an item from one section to the other by pressing on the right of the food and then pick where they want to add it. They can do the same with the meals and choose which date they pick.
+
+ - In the desktop version the user will be able to drag and drop their selections.
+
+ ![Calendar Printout](wireframes/calendar_printout.png)
+
+ - Finally, when the user is satisfied with their weekly plan they can download a pdf of the weekly plan and the shopping list which they can print and keep on their fridge!
