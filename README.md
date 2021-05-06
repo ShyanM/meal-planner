@@ -57,12 +57,12 @@ As a user I want:
 
  ### Wireframes
 
- [Welcome Page](./wireframes/landing_page.png)
+ [Welcome Page](wireframes/landing_page.png)
 
- [Dietary Choice](./wireframes/diet_choice.png)
+ [Dietary Choice](wireframes/diet_choice.png)
 
- [Tutorial](./wireframes/tutorial.png)
+ [Tutorial](wireframes/tutorial.png)
   
- [Main Page](./wireframes/main_page.png)
+ [Main Page](wireframes/main_page.png)
 
- [Calendar Printout](./wireframes/calendar_printout.png)
+ [Calendar Printout](wireframes/calendar_printout.png)
