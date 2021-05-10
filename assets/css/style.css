@@ -16,11 +16,28 @@ body {
 
 .title {
     color: white;
+    
+    
+}
+
+.title h1 {
+    font-size: 5vw;
+    text-align: center;
+    backdrop-filter: blur(9px) grayscale(1);
+}
+
+.down_arrow {
+    font-size: 20px;
+    color: white;
 }
 
 .diet_choice {
     height: 100%;
     
+}
+
+.card {
+    max-width: fit-content;
 }
 
 .card img {
