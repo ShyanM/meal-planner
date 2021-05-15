@@ -81,7 +81,9 @@
             <div class=" card shopping">
                 <div class="card-header">Shopping</div>
 
-                <ul class="list-group">
+                <!--scroll effect from https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap-->
+
+                <ul class="list-group scroll">
                     <div class="omnivore">
                         <input type="checkbox" class="food" id="chickenbreast">
                         <label for="chickenbreast">Chicken Breast</label>
@@ -223,14 +225,30 @@
 
         </div>
 
-        <div class="col-12 calendar">
-            <h6>Monday</h6>
-            <h6>Tuesday</h6>
-            <h6>Wednesday</h6>
-            <h6>Thursday</h6>
-            <h6>Friday</h6>
-            <h6>Saturday</h6>
-            <h6>Sunday</h6>
+        <!--table using bootstrap - https://getbootstrap.com/docs/4.0/content/tables/ -->
+        <div class="div">
+            <table class="table calendar">
+                <thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                </tbody>
+            </table>
         </div>
         <div class="btn"></div>
     </div>

@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 body {
@@ -69,6 +70,12 @@ body {
   
 }
 
+/* scroll effect from https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap*/
+.scroll {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
 .calendar {
-    color: white;
+    background-color: white;
 }
