@@ -7,7 +7,9 @@ body, html {
 body {
     background-color: #2B2A30 !important;
 }
-
+.section1 {
+    height: 100%;
+}
 .welcome_page {
     background-image: url(images/oranges.jpeg);
     height: 100%;
@@ -27,7 +29,7 @@ body {
     padding: 10px 0px;
 }
 
-.arrow_button {
+.arrowButton {
     position: absolute;
     bottom: 8px;
     left: 50%;
@@ -39,10 +41,7 @@ body {
     border: none;
 }
 
-.diet_choice {
-    height: 100%;
-    
-}
+ 
 
 .diet_heading {
     text-align: center;
