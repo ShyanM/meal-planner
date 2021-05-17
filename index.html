@@ -21,15 +21,17 @@
 
         </div>
         <div class="row arrowButton">
-            <div class="col-12 align-self-center down_arrow">
-                <i class="fas fa-chevron-down"></i>
+            <div class="col-12 align-self-center downArrow">
+                <a href="#" class="arrowButton">
+                    <i class="down fas fa-chevron-down"></i>
+                </a>
             </div>
         </div>
 
     </section>
 
 
-    <section>
+    <section class="section2" id="section2">
 
 
         <div class="diet_choice">
@@ -41,43 +43,45 @@
 
                     <!--Cards created using bootstrap-->
 
-                    <div class="card omnivore">
-                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-                            class="card-img-top" alt="">
+                    <a href="#section3" id="omnivore">
+                        <div class="card option">
 
-                        <div class="body">
-                            Omnivore
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+                                class="card-img-top" alt="">
+
+                            <div class="body">
+                                Omnivore
+                            </div>
+
                         </div>
-                    </div>
-                    <div class="card flexiterian">
-                        <img src="https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                            class="card-img-top" alt="">
-                        <div class="body">
-                            Flexiterian
+                    </a>
+
+                    <a href="#section3" id="vegiterian">
+                        <div class="card option">
+                            <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
+                                class="card-img-top" alt="">
+                            <div class="body">
+                                Vegiterian
+                            </div>
                         </div>
-                    </div>
-                    <div class="card vegiterian">
-                        <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
-                            class="card-img-top" alt="">
-                        <div class="body">
-                            Vegiterian
+                    </a>
+                    <a href="#section3" id="vegan">
+                        <div class="card option">
+                            <img src="https://images.unsplash.com/photo-1532980400857-e8d9d275d858?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"
+                                class="card-img-top" alt="">
+                            <div class="body">
+                                Vegan
+                            </div>
                         </div>
-                    </div>
-                    <div class="card vegan">
-                        <img src="https://images.unsplash.com/photo-1532980400857-e8d9d275d858?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"
-                            class="card-img-top" alt="">
-                        <div class="body">
-                            Vegan
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="section3">
         <div class="main_page">
-            <div class="card-deck">
+            <div class="card-deck" id="section3">
                 <div class="card pantry">
                     <div class="card-header">Pantry</div>
                     <ul class="list-group">
@@ -266,7 +270,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/website.js"></script>
-    
+
 </body>
 
 </html>
