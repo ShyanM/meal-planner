@@ -22,7 +22,7 @@
         </div>
         <div class="row arrowButton">
             <div class="col-12 align-self-center downArrow">
-                <a href="#" class="arrowButton">
+                <a href="#section2" class="arrowButton">
                     <i class="down fas fa-chevron-down"></i>
                 </a>
             </div>
@@ -30,236 +30,84 @@
 
     </section>
 
+    <section class="section2">
+        <div class="main_page">
 
-    <section class="section2" id="section2">
-
-
-        <div class="diet_choice">
-            <div class="row justify-content-center">
-                <div class="col-12 diet_heading">
-                    <h3>Please choose your dietary preference</h3>
-                </div>
-                <div class="card-deck dietary_options">
-
-                    <!--Cards created using bootstrap-->
-
-                    <a href="#section3" id="omnivore">
-                        <div class="card option">
-
-                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-                                class="card-img-top" alt="">
-
-                            <div class="body">
-                                Omnivore
-                            </div>
-
-                        </div>
-                    </a>
-
-                    <a href="#section3" id="vegiterian">
-                        <div class="card option">
-                            <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
-                                class="card-img-top" alt="">
-                            <div class="body">
-                                Vegiterian
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#section3" id="vegan">
-                        <div class="card option">
-                            <img src="https://images.unsplash.com/photo-1532980400857-e8d9d275d858?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"
-                                class="card-img-top" alt="">
-                            <div class="body">
-                                Vegan
-                            </div>
-                        </div>
-                    </a>
+            <div class="diet_choice">
+                <div class="row justify-content-center">
+                    <select name="dChoice" id="dChoice">
+                        <option value="">Please choose your dietary preference</option>
+                        <option value="omnivore">Omnivore</option>
+                        <option value="vegiterian">Vegan</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="section3">
-        <div class="main_page">
-            <div class="card-deck" id="section3">
+
+
+
+            <div class="card-deck" id="section2">
                 <div class="card pantry">
                     <div class="card-header">Pantry</div>
-                    <ul class="list-group">
-                        <li>list</li>
+                    <!--scroll effect from https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap-->
+                    <ul class="list-group scroll">
+                        <li id="pantry"></li>
                     </ul>
                 </div>
-                <div class=" card shopping">
+                <div class="card shopping">
                     <div class="card-header">Shopping</div>
-
-                    <!--scroll effect from https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap-->
-
                     <ul class="list-group scroll">
-                        <div class="omnivore">
-                            <input type="checkbox" class="food" id="chickenbreast">
-                            <label for="chickenbreast">Chicken Breast</label>
-                            <br>
-                            <input type="checkbox" class="food" id="chickenthighs">
-                            <label for="chickenthighs">Chicken Thighs</label>
-                            <br>
-                            <input type="checkbox" class="food" id="bacon">
-                            <label for="bacon">Bacon</label>
-                            <br>
-                            <input type="checkbox" class="food" id="turkey">
-                            <label for="turkey">Turkey</label>
-                            <br>
-                            <input type="checkbox" class="food" id="porkchops">
-                            <label for="porkchops">Pork Chops</label>
-                            <br>
-                            <input type="checkbox" class="food" id="porkribs">
-                            <label for="porkribs">Pork Ribs</label>
-                            <br>
-                            <input type="checkbox" class="food" id="beefmince">
-                            <label for="beefmince">Beef Mince</label>
-                            <br>
-                            <input type="checkbox" class="food" id="turkeymince">
-                            <label for="turkeymince">Turkey Mince</label>
-                            <br>
-                            <input type="checkbox" class="food" id="meatballs">
-                            <label for="meatballs">Meatballs</label>
-                            <br>
-                        </div>
-                        <div class="vegiterian">
-                            <input type="checkbox" class="food" id="eggs">
-                            <label for="eggs">Eggs</label>
-                            <br>
-                            <input type="checkbox" class="food" id="milk">
-                            <label for="milk">Milk</label>
-                            <br>
-                            <input type="checkbox" class="food" id="yogurt">
-                            <label for="yogurt">Yogurt</label>
-                            <br>
-                            <input type="checkbox" class="food" id="greekyogurt">
-                            <label for="greekyogurt">Greek Yogurt</label>
-                            <br>
-                            <input type="checkbox" class="food" id="sourcream">
-                            <label for="sourcream">Sour Cream</label>
-                            <br>
-                            <input type="checkbox" class="food" id="fetacheese">
-                            <label for="fetacheese">Feta Cheese</label>
-                            <br>
-                            <input type="checkbox" class="food" id="soyabeans">
-                            <label for="soyabeans">Soya Beans</label>
-                            <br>
-                            <input type="checkbox" class="food" id="tortillas">
-                            <label for="tortillas">Tortillas</label>
-                            <br>
-                            <input type="checkbox" class="food" id="bread">
-                            <label for="bread">Bread</label>
-                            <br>
-                            <input type="checkbox" class="food" id="soyabeans">
-                            <label for="soyabeans">Soya Beans</label>
-                            <br>
-                            <input type="checkbox" class="food" id="freshpasta">
-                            <label for="freshpasta">Fresh Pasta</label>
-                            <br>
-                            <input type="checkbox" class="food" id="butter">
-                            <label for="butter">Butter</label>
-                            <br>
-                            <input type="checkbox" class="food" id="cheese">
-                            <label for="cheese">Cheese</label>
-                            <br>
-                        </div>
-                        <div class="vegan">
-                            <input type="checkbox" class="food" id="soyabeans">
-                            <label for="soyabeans">Soya Beans</label>
-                            <br>
-                            <input type="checkbox" class="food" id="lentils">
-                            <label for="lentils">Lentils</label>
-                            <br>
-                            <input type="checkbox" class="food" id="chickpeas">
-                            <label for="chickpeas">Chickpeas</label>
-                            <br>
-                            <input type="checkbox" class="food" id="tofu">
-                            <label for="tofu">Tofu</label>
-                            <br>
-                            <input type="checkbox" class="food" id="peanutbutter">
-                            <label for="peanutbutter">Peanut Butter</label>
-                            <br>
-                            <input type="checkbox" class="food" id="rice">
-                            <label for="rice">Rice</label>
-                            <br>
-                            <input type="checkbox" class="food" id="avocado">
-                            <label for="avocado">Avocado</label>
-                            <br>
-                            <input type="checkbox" class="food" id="kale">
-                            <label for="kale">Kale</label>
-                            <br>
-                            <input type="checkbox" class="food" id="spinach">
-                            <label for="spinach">Spinach</label>
-                            <br>
-                            <input type="checkbox" class="food" id="broccoli">
-                            <label for="broccoli">Broccoli</label>
-                            <br>
-                            <input type="checkbox" class="food" id="mushrooms">
-                            <label for="mushrooms">Mushrooms</label>
-                            <br>
-                            <input type="checkbox" class="food" id="kidneybeans">
-                            <label for="kidneybeans">Kidney Beans</label>
-                            <br>
-                            <input type="checkbox" class="food" id="spinach">
-                            <label for="spinach">Spinach</label>
-                            <br>
-                            <input type="checkbox" class="food" id="pasta">
-                            <label for="pasta">Pasta</label>
-                            <br>
-                            <input type="checkbox" class="food" id="quinoa">
-                            <label for="quinoa">Quinoa</label>
-                            <br>
-                            <input type="checkbox" class="food" id="couscous">
-                            <label for="couscous">Couscous</label>
-                            <br>
-                            <input type="checkbox" class="food" id="sweetpotato">
-                            <label for="sweetpotato">Sweet Potato</label>
-                            <br>
-                            <input type="checkbox" class="food" id="oatmilk">
-                            <label for="oatmilk">Oat Milk</label>
-                            <br>
-
-                            <input type="checkbox" class="food" id="almondmilk">
-                            <label for="almondmilk">Almond Milk</label>
-                            <br>
-                        </div>
+                        <li id="shopping"></li>
                     </ul>
+
                 </div>
                 <div class="card meals">
                     <div class="card-header">Meals</div>
-                    <ul class="list-group">
-                        <li>list</li>
+                    <ul class="list-group scroll">
+                        <li id="meals"></li>
                     </ul>
                 </div>
 
             </div>
 
             <!--table using bootstrap - https://getbootstrap.com/docs/4.0/content/tables/ -->
-            <div class="div">
-                <table class="table calendar">
-                    <thead>
-                        <tr>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                            <th>Saturday</th>
-                            <th>Sunday</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+
+            <table class="table calendar">
+                <tbody>
+                    <tr>
+                        <th>Monday</th>
                         <td>Example</td>
+                    </tr>
+
+                    <tr>
+                        <th>Tuesday</th>
                         <td>Example</td>
+                    </tr>
+                    <tr>
+
+                        <th>Wednesday</th>
                         <td>Example</td>
+                    </tr>
+                    <tr>
+                        <th>Thursday</th>
                         <td>Example</td>
+                    </tr>
+                    <tr>
+                        <th>Friday</th>
                         <td>Example</td>
+                    </tr>
+                    <tr>
+                        <th>Saturday</th>
                         <td>Example</td>
+                    </tr>
+                    <tr>
+                        <th>Sunday</th>
                         <td>Example</td>
-                    </tbody>
-                </table>
-            </div>
+                    </tr>
+                </tbody>
+            </table>
+
             <div class="btn"></div>
         </div>
     </section>

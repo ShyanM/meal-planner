@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-    background-color: #2B2A30 !important;
+    background-color: #002b3d !important;
 }
 .section1 {
     height: 100%;
@@ -14,9 +14,7 @@ body {
 .section2 {
     height: 100%;
 }
-.section3 {
-    height: 100%;
-}
+
 a {
     color: inherit;
     text-decoration: inherit;
@@ -28,6 +26,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .title {
@@ -53,47 +52,45 @@ a {
     border: none;
 }
 
-.diet_heading {
-    text-align: center;
-    color: white;
-    padding: 30px;
-}
-
-.dietary_options card {
-    max-width: fit-content;
-    
-}
-
-.option {
-    background-color: #f09c6a !important;
-}
-  
-.card img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-}
-
-.body {
-    text-align: center;
-    padding: 10px 0;
-}
-
-
-/* scroll effect from https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap*/
-.scroll {
-    max-height: 200px;
-    overflow-y: auto;
+.section2 {
+    background-image: url(images/oranges-blue.jpeg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-deck {
-    margin-top: 10px;
-    margin-bottom: 200px;
+    width: 95% !important;
+    left: 2.5%;
+    bottom: -50%;
+    position: absolute;
 }
 
+.card-header {
+    background-color: #e96a20!important;
+    text-align: center;
+}
+
+.card {
+    background-color: #f6bfa2 !important;
+}
+
+.table {
+    left: 10%;
+    bottom: -98%;
+    position: absolute;
+    width: 80% !important;
+}
+
+
 .calendar {
-    background-color: white;
+    background-color: #D6F3FF;
     padding: 20px;
+}
+
+th, td {
+    border-top: none !important;
 }
 
 
