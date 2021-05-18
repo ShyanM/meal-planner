@@ -60,6 +60,16 @@ a {
     background-size: cover;
 }
 
+.dChoice {
+    height: 50px;
+    position: absolute;
+    top: 105%;
+    width: 95%;
+    background-color: rgba(214, 243, 255, 0.5);
+    color: white;
+    
+}
+
 .card-deck {
     width: 95% !important;
     left: 2.5%;
@@ -73,7 +83,7 @@ a {
 }
 
 .card {
-    background-color: #f6bfa2 !important;
+    background-color: rgba(246, 191, 162, 0.5) !important;
 }
 
 .table {
@@ -85,7 +95,7 @@ a {
 
 
 .calendar {
-    background-color: #D6F3FF;
+    background-color: rgba(214, 243, 255, 0.5);
     padding: 20px;
 }
 
