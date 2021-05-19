@@ -12,11 +12,13 @@ $(document).ready(function () {
 
 });
 
-
+/* https://freshman.tech/todo-list/*/
 let foodItem = [];
 
 function renderFoodItem(newFood){
+    localStorage.setItem('foodItem', JSON.stringify(foodItem));
     const list = document.querySelector('.shoppingList');
+    const item = document.querySelector(`[data-key='${newFood}']`)
 
     const isChecked = newFood.checked ? 'done' : '';
     const node = document.createElement('li');
@@ -29,7 +31,14 @@ function renderFoodItem(newFood){
     
     `;
 
+    if (item) {
+        list.replaceChild(node, item);
+    } else {
+        
+   
+
     list.append(node);
+}
 }
 
 /* add new food item*/
@@ -48,6 +57,13 @@ renderFoodItem(newFood);
 
 };
 
+function toggleDone(key){
+    const index = foodItem.findIndex (item => item.id === Number(key));
+
+    foodItem[index].checked = !foodItem[index].checked;
+    renderFoodItem(foodItem[index]);
+}
+
 const form = document.querySelector('.js-form')
 form.addEventListener('submit', event => {
     event.preventDefault();
@@ -61,4 +77,23 @@ if (text !== ''){
     input.value = '';
     input.focus();
 }
+})
+
+const list = document.querySelector('.shoppingList');
+
+list.addEventListener('click', event => {
+    if (event.target.classList.contains('js-tick')){
+        const itemKey = event.target.parentElement.dataset.key;
+        toggleDone(itemKey);
+    }
+})
+
+document.addEventListener ('DOMContentLoaded', () => {
+    const ref = localStorage.getItem('foodItem');
+    if (ref){
+        foodItem = JSON.parse(ref);
+        foodItem.forEach(t => {
+            renderFoodItem(t)
+        })
+    }
 })
