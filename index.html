@@ -35,7 +35,7 @@
 
             <div class="diet_choice">
                 <div class="row justify-content-center">
-                    <select name="dChoice" id="dChoice">
+                    <select name="dChoice" id="dChoice" class="dChoice">
                         <option value="">Please choose your dietary preference</option>
                         <option value="omnivore">Omnivore</option>
                         <option value="vegiterian">Vegan</option>
@@ -57,9 +57,12 @@
                 </div>
                 <div class="card shopping">
                     <div class="card-header">Shopping</div>
-                    <ul class="list-group scroll">
-                        <li id="shopping"></li>
-                    </ul>
+                    <ul class="shoppingList"></ul>
+                    <form class="js-form">
+                        <input type="text" aria-label="Enter a new food" placeholder="add new food item"
+                            class="newFoodInput">
+                    </form>
+
 
                 </div>
                 <div class="card meals">
