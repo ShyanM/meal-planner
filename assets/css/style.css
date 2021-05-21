@@ -103,6 +103,13 @@ th, td {
     border-top: none !important;
 }
 
+ul {
+    list-style-type: none;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
 
 
 @media only screen  and (min-width: 1224px) {
