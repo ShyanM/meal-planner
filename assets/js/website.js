@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     /* https://freshman.tech/todo-list/*/
 
-    /* search function*/
+    /* add food item function*/
 
     let foodItem = [];
 
@@ -100,6 +100,8 @@ $(document).ready(function () {
         }
     })
 
+
+    /* Create List */
   
     var omnivore = "Chicken Breast \n Chicken Thighs \n Minced Meat \n Steak \n Turkey Steak \n Turkey Mince \n Meatballs \n Turkey Meatballs \n Fish \n Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower \n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
     var vegiterian = "Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower\n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
@@ -109,6 +111,7 @@ $(document).ready(function () {
     var c2 = vegiterian.split("\n");
     var c3 = vegan.split("\n");
 
+    /* create list for pantry */
 
     $('select#dChoice').change(function () {
         /* alert if selection box empty */
@@ -130,7 +133,7 @@ $(document).ready(function () {
             }
         } else if ($(this).children(":selected").val() === "vegan") {
             for (var i = 0; i < c3.length; i++) {
-                var input = "<label class = 'ingredients' ><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</label>";
+                var input = "<label class = 'ui-widget-content' id = 'draggable'><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</label>";
             
                 $("#pantry").append(input);
             }
@@ -138,7 +141,7 @@ $(document).ready(function () {
     });
 
 
-
+/* create list for meals */
 
 var oMeal = "Lasagna \n Roast Chicken \n Curry \n Quiche \n Pasta Bake \n Chilli con Carne \n Risotto ";
 var vNMeal = "Courgette Lasagna \n Falafels \n Vegetable Curry \n Vegiterian Quiche \n Pasta Bake \n Mushroom Risotto \n Veggie Burger ";
@@ -171,18 +174,21 @@ $('select#dChoice').change(function () {
     }
 });
 
-function draggable (){
 
-$(".ingredients").draggable();
 
-$(".js-form").droppable({
-    accept: ".ingredients",
-    drop: function(ev, ui) {
-        alert("Item dropped")
+
+
+
+$("#draggable").draggable();
+
+$("#droppable").droppable({
+   
+    drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          
     }
-}
-)
 
-}
+})
 
 });
