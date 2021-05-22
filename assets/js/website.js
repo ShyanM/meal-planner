@@ -130,7 +130,7 @@ $(document).ready(function () {
             }
         } else if ($(this).children(":selected").val() === "vegan") {
             for (var i = 0; i < c3.length; i++) {
-                var input = "<label><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</label>";
+                var input = "<label class = 'ingredients' ><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</label>";
             
                 $("#pantry").append(input);
             }
@@ -164,12 +164,25 @@ $('select#dChoice').change(function () {
         }
     } else if ($(this).children(":selected").val() === "vegan") {
         for (var i = 0; i < m3.length; i++) {
-            var input = "<label><input type='checkbox' value= '" + i + "'/>" + m3[i] + "</label>";
+            var input = "<label class = 'meals'><input type='checkbox' value= '" + i + "'/>" + m3[i] + "</label>";
         
             $("#meal").append(input);
         }
     }
 });
 
+function draggable (){
 
-})
+$(".ingredients").draggable();
+
+$(".js-form").droppable({
+    accept: ".ingredients",
+    drop: function(ev, ui) {
+        alert("Item dropped")
+    }
+}
+)
+
+}
+
+});
