@@ -1,15 +1,14 @@
 $(document).ready(function () {
 
     /* scroll to second section 
-    created with the help of : https://www.youtube.com/watch?v=xYDgc05oQzU 
+    created with the help of :https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_smooth_scroll_jquery and https://codepen.io/nxworld/pen/OyRrGy 
 */
-
-    $(".arrowButton").click(function () {
-        $('html, body').animate({
-            scrollTop: $("section2").offset().top
-        })
-    })
-
+$(function() {
+    $('a').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
 
     /* https://freshman.tech/todo-list/*/
 
@@ -27,18 +26,13 @@ $(document).ready(function () {
         node.setAttribute('class', `food-item ${isChecked}`);
         node.setAttribute('data-key', newFood.id);
         node.innerHTML = `
-    <input id="${newFood.id}" type= "checkbox">
-    <label for="${newFood.id}" class="tick js-tick"></label>
-    <span>${newFood.text}</span>
-    
+    <label for="${newFood.id}" class="tick js-tick"> 
+     <span> <input id="${newFood.id}" type= "checkbox"> ${newFood.text}</span> </label>
     `;
 
         if (item) {
             list.replaceChild(node, item);
         } else {
-
-
-
             list.append(node);
         }
     }
@@ -122,18 +116,18 @@ $(document).ready(function () {
             /* http://jsfiddle.net/JWPZh/2/ */
         } else if ($(this).children(":selected").val() === "omnivore") {
             for (var i = 0; i < c1.length; i++) {
-                var input =  "<label><input type='checkbox' value= '" + i + "'/>" + c1[i] + "</label>";
+                var input =  "<li><input type='checkbox' value= '" + i + "'/>" + c1[i] + "</li>";
                 $("#pantry").append(input);
             }
 
         } else if ($(this).children(":selected").val() === "vegiterian") {
             for (var i = 0; i < c2.length; i++) {
-                var input =  "<label><input type='checkbox' value= '" + i + "'/>" + c2[i] + "</label>";
+                var input =  "<li><input type='checkbox' value= '" + i + "'/>" + c2[i] + "</li>";
                 $("#pantry").append(input);
             }
         } else if ($(this).children(":selected").val() === "vegan") {
             for (var i = 0; i < c3.length; i++) {
-                var input = "<label class = 'ui-widget-content' id = 'draggable'><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</label>";
+                var input = "<li class = 'ui-widget-content' id = 'draggable'><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</li>";
             
                 $("#pantry").append(input);
             }
@@ -175,7 +169,7 @@ $('select#dChoice').change(function () {
 });
 
 
-
+$("#block").draggable();
 
 
 

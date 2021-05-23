@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -51,14 +53,14 @@
                 <div class="card pantry">
                     <div class="card-header">Pantry</div>
                     <!--scroll effect from https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap-->
-                    <ul class="list-group" id="pantry">
+                    <ul class="list-group block" id="pantry">
                         
                     </ul>
                 </div>
                 <div class="card shopping">
                     <div class="card-header">Shopping</div>
                     <ul class="shoppingList"></ul>
-                    <form class="js-form">
+                    <form class="js-form ui-widget-header" id="droppable">
                         <input type="text" aria-label="Enter a new food" placeholder="add new food item"
                             class="newFoodInput">
                     </form>

@@ -6,14 +6,21 @@ body, html {
 
 body {
     background-color: #002b3d !important;
+    font-family: 'Gothic A1', sans-serif;
+    color: whitesmoke;
 }
 .section1 {
     height: 100%;
 }
 
 a {
-    color: inherit;
+    color: whitesmoke !important;
     text-decoration: inherit;
+    
+}
+
+a :hover {
+    opacity: 0.5;
 }
 
 .welcome_page {
@@ -43,8 +50,8 @@ a {
 }
 
 .downArrow {
-    font-size: 20px;
-    color: white;
+    font-size: x-large;
+    color: whitesmoke;
     border: none;
 }
 
@@ -77,10 +84,13 @@ a {
 .card-header {
     background-color: #e96a20!important;
     text-align: center;
+    font-weight: 600;
+    color: whitesmoke;
 }
 
 .card {
     background-color: rgba(246, 191, 162, 0.5) !important;
+    color: whitesmoke;
 }
 
 .table {
@@ -98,6 +108,7 @@ a {
 
 th, td {
     border-top: none !important;
+    color: whitesmoke;
 }
 
 ul {
@@ -107,6 +118,11 @@ ul {
 .list-group {
     max-height: 300px;
     overflow-y: scroll ;
+}
+
+input {
+    background-color: rgba(252, 253, 255,0.5);
+    width: 100%;
 }
 
 
