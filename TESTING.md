@@ -34,3 +34,35 @@
     The CSS showed an issue with the backdrop filter, so I changed it to a normal background colour so there won't be issues across platforms.
 
     ![alt text](readme_images/html_validator.png)
+
+    ### Lighthouse
+
+    ![alt text](readme_images/lighthouse.png)
+
+    ## Manual Testing
+
+    ### Welcome Page
+
+    * Image is responsive both on web and mobile.
+    * Title sizing is responsive for both as well.
+    * Click button works and takes you to section 2.
+
+    ### Main Page
+
+    * Dropdown menu is size responsive for web and mobile.
+    * Dropdown menu works, each link was tested.
+    * cards are responsive as well. 
+    * Drag and drop works in both version.
+    * Checklists switch on and off.
+    * Meal input form works well.
+    * Calendar dropdowns all work.
+
+
+## Bugs
+
+* The checklist and input were not lining up.
+    * Fix: Changing around the way the javascript was written, to make everything inline.
+
+* Javascript was reading the spaces as new entries
+    * After research I found that using \n instead of a comma or a space made everything more cohesive.
+

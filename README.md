@@ -1,5 +1,8 @@
+![alt text](./readme_images/mockup.png)
 
 # Meal Planner
+
+You can find a link to the live website [here](https://shyanm.github.io/meal-planner/).
 
 The aim of this assignment is to create a meal planner using Html, CSS and Javascript. The meal planner is a tool for anyone who cooks whether it's just for themselves or for their family or friends. The main idea is that on this page, a user can see all the groceries they have, any groceries they need to buy, meals they can make and add them to a weekly schedule.
 
