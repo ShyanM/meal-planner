@@ -43,10 +43,10 @@ The target audience for this page is anyone who cooks whether it's just for them
 
 As a user I want:
 
+- to be able to filter between different dietary options.
 - to be able to see the list of food and tick the items I own.
-- to be able to add items to a shopping list so I know what I need.
+-- to be able to move ingredients from the shopping list to the owned items list and vice versa.
 - to be able to see meal ideas and add my own meals to the list.
-- to be able to move ingredients from the shopping list to the owned items list and vice versa.
 - to be able to assign meals to a date in the week so I can plan my week.
 
 ### Design Choices
@@ -118,7 +118,11 @@ The main feature that I would like to implement is an api that pulls recipes fro
 
     * Balsamiq
 
-    To deploy the Github pages, I did the following steps:
+## 4. [Testing](./TESTING.md)
+
+## 5. Deployment
+
+To deploy the Github pages, I did the following steps:
 
  * I used the Code Institute [template](https://github.com/Code-Institute-Org/gitpod-full-template) as a base for my project.
  * To do that I clicked on the new repository button.
@@ -142,6 +146,8 @@ or:
 
 * click on open with Github Desktop and click choose.
 * Find the local path you want to clone to and click clone.
+
+
 
 ## 6. Credits
  
@@ -179,5 +185,6 @@ or:
 * [Droppable with the help of my mentor and Jquery UI](https://jqueryui.com/droppable/)
 
 ### Acknowledgements
+
 
 Special thanks to my mentor Narender Singh with his help both with code and with calming me down when I'm stressed with an assignment.
