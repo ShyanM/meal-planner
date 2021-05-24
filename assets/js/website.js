@@ -1,8 +1,5 @@
 $(document).ready(function () {
-
-
     /* Created with the help of : https://freshman.tech/todo-list/*/
-
     /* add new food item function*/
 
     let foodItem = [];
@@ -37,18 +34,14 @@ $(document).ready(function () {
 
     /* add new food item*/
 
-
     function addnewFood(text) {
         const newFood = {
             text,
             checked: false,
             id: Date.now(),
         };
-
-
         foodItem.push(newFood);
         renderFoodItem(newFood);
-
     };
 
     function toggleDone(key) {
@@ -61,9 +54,7 @@ $(document).ready(function () {
     const form = document.querySelector('.js-form')
     form.addEventListener('submit', event => {
         event.preventDefault();
-
         const input = document.querySelector('.newFoodInput');
-
         const text = input.value.trim();
         if (text !== '') {
             addnewFood(text);
@@ -73,13 +64,11 @@ $(document).ready(function () {
     })
 
     const list = document.querySelector('.mealList');
-
     list.addEventListener('click', event => {
         if (event.target.classList.contains('js-tick')) {
             const itemKey = event.target.parentElement.dataset.key;
             toggleDone(itemKey);
         }
-
     })
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -91,13 +80,11 @@ $(document).ready(function () {
             })
         }
     })
-
-
     /* Create Lists */
 
-    var omnivore = "Chicken Breast \n Chicken Thighs \n Minced Meat \n Steak \n Turkey Steak \n Turkey Mince \n Meatballs \n Turkey Meatballs \n Fish \n Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower \n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
-    var vegiterian = "Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower\n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
-    var vegan = "Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower\n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
+    var omnivore = "Chicken Breast \n Chicken Thighs \n Minced Meat \n Steak \n Turkey Steak \n Turkey Mince \n Meatballs \n Turkey Meatballs \n Fish \n Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Quinoa \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Miso \n Broccoli \n Carrots \n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans";
+    var vegiterian = "Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Quinoa \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Miso \n Broccoli \n Carrots \n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans";
+    var vegan = "Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Quinoa \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Miso \n Broccoli \n Carrots \n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans";
 
     var c1 = omnivore.split("\n");
     var c2 = vegiterian.split("\n");
@@ -117,24 +104,19 @@ $(document).ready(function () {
                 var input = "<li><input type='checkbox' value= '" + i + "'/>" + c1[i] + "</li> ";
                 $("#pantry").append(input);
             }
-
         } else if ($(this).children(":selected").val() === "vegiterian") {
             for (var i = 0; i < c2.length; i++) {
                 var input = "<li><input type='checkbox' value= '" + i + "'/>" + c2[i] + "</li> ";
                 $("#pantry").append(input);
-
             }
         } else if ($(this).children(":selected").val() === "vegan") {
             for (var i = 0; i < c3.length; i++) {
                 var input = "<li><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</li> ";
-
                 $("#pantry").append(input);
 
             }
         }
     });
-
-
     /* create list for meals */
 
     var oMeal = "Lasagna \n Roast Chicken \n Curry \n Quiche \n Pasta Bake \n Chilli con Carne \n Risotto ";
@@ -150,27 +132,19 @@ $(document).ready(function () {
         if ($(this).children(":selected").val() === "omnivore") {
             for (var i = 0; i < m1.length; i++) {
                 var input = "<li class='meal'><input type='checkbox' value= '" + i + "'/>" + m1[i] + "</li>";
-
                 $("#meal").append(input);
             }
 
         } else if ($(this).children(":selected").val() === "vegiterian") {
             for (var i = 0; i < m2.length; i++) {
                 var input = "<li class='meal'><input type='checkbox' value= '" + i + "'/>" + m2[i] + "</li>";
-
                 $("#meal").append(input);
             }
         } else if ($(this).children(":selected").val() === "vegan") {
             var input = "<li class='meal'><input type='checkbox' value= '" + i + "'/>" + m3[i] + "</li>";
-
             $("#meal").append(input);
-
         }
-
     });
-
-
-
 })
 
 /* created with the help of my mentor and Jquery ui api: https://jqueryui.com/droppable/ & https://jqueryui.com/sortable/ */
@@ -189,8 +163,6 @@ $(function () {
         }
     }).disableSelection()
 
-
-
     /* Create meal options in a dropdown list for calendar */
 
     var oMeal = "Lasagna \n Roast Chicken \n Curry \n Quiche \n Pasta Bake \n Chilli con Carne \n Risotto ";
@@ -201,32 +173,21 @@ $(function () {
     var m2 = vNMeal.split("\n")
     var m3 = vMeal.split("\n")
 
-
-
-
     $('select#dChoice').change(function () {
-
         if ($(this).children(":selected").val() === "omnivore") {
             for (var i = 0; i < m1.length; i++) {
                 var input = "<option>" + m1[i] + "</option>";
-
                 $(".mealoption").append(input);
             }
 
         } else if ($(this).children(":selected").val() === "vegiterian") {
             for (var i = 0; i < m2.length; i++) {
                 var input = "<option>" + m2[i] + "</option>";
-
                 $(".mealoption").append(input);
             }
         } else if ($(this).children(":selected").val() === "vegan") {
             var input = "<option>" + m3[i] + "</option>";
-
             $(".mealoption").append(input);
-
         }
-
     });
-
-
 });
