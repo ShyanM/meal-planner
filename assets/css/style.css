@@ -1,30 +1,27 @@
+/*       General       */
 html {
     scroll-behavior: smooth;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     position: relative;
     overflow-x: hidden;
 }
 
 body {
-    background-color: #002b3d !important;
     font-family: 'Gothic A1', sans-serif !important;
-    color: whitesmoke !important;
+    color: #fff !important;
 }
+
+/*      Welcome Page       */
+
 .section1 {
     height: 100%;
 }
 
-a {
-    color: whitesmoke !important;
-    
-}
 
-a :hover {
-    opacity: 0.5;
-}
 
 .welcome_page {
     background-image: url(images/oranges.jpeg);
@@ -36,7 +33,7 @@ a :hover {
 }
 
 .title {
-    color: white;    
+    color: #fff;
 }
 
 .title h1 {
@@ -54,9 +51,19 @@ a :hover {
 
 .downArrow {
     font-size: x-large;
-    color: whitesmoke;
+    color: #fff;
     border: none;
 }
+
+a {
+    color: #fff !important;
+}
+
+a :hover {
+    opacity: 0.5;
+}
+
+/*        Main Page        */
 
 .section2 {
     background-image: url(images/oranges-blue.jpeg);
@@ -83,10 +90,9 @@ h4 {
 .dChoice {
     height: 50px;
     width: 95%;
-    background-color: rgba(246, 191, 162, 0.7) !important;;
-    color: white;
+    background-color: rgba(246, 191, 162, 0.7) !important;
+    color: #fff;
     border: none;
-    
 }
 
 .card-deck {
@@ -95,23 +101,22 @@ h4 {
 }
 
 .card-header {
-    background-color: #e96a20!important;
+    background-color: #e96a20 !important;
     text-align: center;
     font-weight: 600;
-    color: whitesmoke;
+    color: #fff;
 }
 
 .card {
     background-color: rgba(246, 191, 162, 0.7) !important;
-    color: whitesmoke;
+    color: #fff;
 }
 
 .table {
     position: relative;
     padding: 30px;
-    
-}
 
+}
 
 .calendar {
     background-color: rgba(246, 191, 162, 0.7) !important;
@@ -120,7 +125,7 @@ h4 {
 
 th, td {
     border-top: none !important;
-    color: whitesmoke;
+    color: #fff;
 }
 
 th {
@@ -134,8 +139,9 @@ td {
 .mealoption {
     height: 50px;
     width: 95%;
-    background-color: rgba(246, 191, 162, 0.7) !important;;
-    color: white;
+    background-color: rgba(70, 92, 145, 0.7) !important;
+    ;
+    color: #fff;
     border: none;
 }
 
@@ -145,11 +151,11 @@ ul {
 
 .list {
     max-height: 300px;
-    overflow-y: auto ;
+    overflow-y: auto;
 }
 
 input {
-    background-color: rgba(252, 253, 255,0.5);
+    background-color: rgba(252, 253, 255, 0.5);
     width: 100%;
 }
 
@@ -175,20 +181,15 @@ li:active {
     background-color: rgba(246, 191, 162, 1);
 }
 
+/*           media query         */
 
-.delete-food {
-    border-style: hidden;
-    background-color: transparent;
-}
-
-@media only screen  and (min-width: 1224px) {
+@media only screen and (min-width: 1224px) {
     .card-deck {
         margin-top: 100px;
     }
 }
 
-
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
     .card img {
         height: 150px;
     }
