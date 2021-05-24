@@ -3,12 +3,14 @@ $(document).ready(function () {
     /* scroll to second section 
     created with the help of :https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_smooth_scroll_jquery and https://codepen.io/nxworld/pen/OyRrGy 
 */
-$(function() {
-    $('a').on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    $(function () {
+        $('a').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+        });
     });
-  });
 
     /* https://freshman.tech/todo-list/*/
 
@@ -18,16 +20,23 @@ $(function() {
 
     function renderFoodItem(newFood) {
         localStorage.setItem('foodItem', JSON.stringify(foodItem));
+
         const list = document.querySelector('.shoppingList');
-        const item = document.querySelector(`[data-key='${newFood}']`)
+        const item = document.querySelector(`[data-key='${newFood.id}']`);
+
 
         const isChecked = newFood.checked ? 'done' : '';
         const node = document.createElement('li');
-        node.setAttribute('class', `food-item ${isChecked}`);
+        node.setAttribute('class', `newFood-item ${isChecked}`);
         node.setAttribute('data-key', newFood.id);
         node.innerHTML = `
-    <label for="${newFood.id}" class="tick js-tick"> 
-     <span> <input id="${newFood.id}" type= "checkbox"> ${newFood.text}</span> </label>
+        
+            <label for="${newFood.id}" class="tick js-tick"></label>
+            <input id="${newFood.id}" type= "checkbox"/>
+            <span> ${newFood.text}</span>
+            <button class="delete-food">
+            <i class="fas fa-times"></i>
+            </button>
     `;
 
         if (item) {
@@ -66,7 +75,6 @@ $(function() {
 
         const input = document.querySelector('.newFoodInput');
 
-
         const text = input.value.trim();
         if (text !== '') {
             addnewFood(text);
@@ -82,6 +90,7 @@ $(function() {
             const itemKey = event.target.parentElement.dataset.key;
             toggleDone(itemKey);
         }
+
     })
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -96,7 +105,7 @@ $(function() {
 
 
     /* Create List */
-  
+
     var omnivore = "Chicken Breast \n Chicken Thighs \n Minced Meat \n Steak \n Turkey Steak \n Turkey Mince \n Meatballs \n Turkey Meatballs \n Fish \n Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower \n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
     var vegiterian = "Eggs \n Milk \n Cheese \n Cottage Cheese \n Cream Cheese \n Honey \n Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower\n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
     var vegan = "Coconut Milk \n Almond Milk \n Oat Milk \n Soya Milk \n Pasta \n Tomato Sauce \n Rice \n Mixed Nuts \n Dried Fruit \n Mushrooms \n Spinach \n Green Beans \n Peas \n Chickpeas \n Tomato Paste \n Chopped Tomatoes \n Tomatoes \n Rolled Oats \n Quinoa \n Barley \n Bulgar \n Onions \n Garlic \n Potatoes \n Sweet Potatoes \n Lentils \n Tempeh \n Tofu \n Nutritional Yeast \n Miso \n Broccoli \n Carrots \n Celery \n Cauliflower\n Cucumbers \n Bell Peppers \n Avocado \n Kale \n Asparagus \n Bread \n Tortillas \n Bagels \n Pitas \n Nut Butter \n Kidney Beans \n Pinto Beans";
@@ -116,73 +125,92 @@ $(function() {
             /* http://jsfiddle.net/JWPZh/2/ */
         } else if ($(this).children(":selected").val() === "omnivore") {
             for (var i = 0; i < c1.length; i++) {
-                var input =  "<li><input type='checkbox' value= '" + i + "'/>" + c1[i] + "</li>";
+                var input = "<li><input type='checkbox' value= '" + i + "'/>" + c1[i] + "<button class='delete-food'><i class='fas fa-times'></i></button></li> ";
                 $("#pantry").append(input);
             }
 
         } else if ($(this).children(":selected").val() === "vegiterian") {
             for (var i = 0; i < c2.length; i++) {
-                var input =  "<li><input type='checkbox' value= '" + i + "'/>" + c2[i] + "</li>";
+                var input = "<li><input type='checkbox' value= '" + i + "'/>" + c2[i] + "<button class='delete-food'><i class='fas fa-times'></i></button></li> ";
                 $("#pantry").append(input);
             }
         } else if ($(this).children(":selected").val() === "vegan") {
             for (var i = 0; i < c3.length; i++) {
-                var input = "<li class = 'ui-widget-content' id = 'draggable'><input type='checkbox' value= '" + i + "'/>" + c3[i] + "</li>";
-            
+                var input = "<li><input type='checkbox' value= '" + i + "'/>" + c3[i] + " <button class='delete-food'><i class='fas fa-times'></i></button></li> ";
+
                 $("#pantry").append(input);
             }
         }
     });
 
 
-/* create list for meals */
+    /* create list for meals */
 
-var oMeal = "Lasagna \n Roast Chicken \n Curry \n Quiche \n Pasta Bake \n Chilli con Carne \n Risotto ";
-var vNMeal = "Courgette Lasagna \n Falafels \n Vegetable Curry \n Vegiterian Quiche \n Pasta Bake \n Mushroom Risotto \n Veggie Burger ";
-var vMeal = "Vegan Fajitas \n Falafels \n Vegetable Curry \n Cauliflower Stew \n Pasta Bake \n Sweet Potato Risotto \n Mushroom Burger ";
+    var oMeal = "Lasagna \n Roast Chicken \n Curry \n Quiche \n Pasta Bake \n Chilli con Carne \n Risotto ";
+    var vNMeal = "Courgette Lasagna \n Falafels \n Vegetable Curry \n Vegiterian Quiche \n Pasta Bake \n Mushroom Risotto \n Veggie Burger ";
+    var vMeal = "Vegan Fajitas \n Falafels \n Vegetable Curry \n Cauliflower Stew \n Pasta Bake \n Sweet Potato Risotto \n Mushroom Burger ";
 
-var m1 = oMeal.split("\n");
-var m2 = vNMeal.split("\n")
-var m3 = vMeal.split("\n")
+    var m1 = oMeal.split("\n");
+    var m2 = vNMeal.split("\n")
+    var m3 = vMeal.split("\n")
 
-$('select#dChoice').change(function () {
-    /* alert if selection box empty */
+    $('select#dChoice').change(function () {
+        /* alert if selection box empty */
 
-   if ($(this).children(":selected").val() === "omnivore") {
-        for (var i = 0; i < m1.length; i++) {
-            var input =  "<label><input type='checkbox' value= '" + i + "'/>" + m1[i] + "</label>";
-            $("#meal").append(input);
-        }
+        if ($(this).children(":selected").val() === "omnivore") {
+            for (var i = 0; i < m1.length; i++) {
+                var input = "<li class='meal'><input type='checkbox' value= '" + i + "'/>" + m1[i] + "<button class='delete-food'><i class='fas fa-times'></i></button></li>";
 
-    } else if ($(this).children(":selected").val() === "vegiterian") {
-        for (var i = 0; i < m2.length; i++) {
-            var input =  "<label><input type='checkbox' value= '" + i + "'/>" + m2[i] + "</label>";
-            $("#meal").append(input);
-        }
-    } else if ($(this).children(":selected").val() === "vegan") {
-        for (var i = 0; i < m3.length; i++) {
-            var input = "<label class = 'meals'><input type='checkbox' value= '" + i + "'/>" + m3[i] + "</label>";
+                $("#meal").append(input);
+            }
+
+        } else if ($(this).children(":selected").val() === "vegiterian") {
+            for (var i = 0; i < m2.length; i++) {
+                var input = "<li class='meal'><input type='checkbox' value= '" + i + "'/>" + m2[i] + "<button class='delete-food'><i class='fas fa-times'></i></button></li>";
+
+                $("#meal").append(input);
+            }
+        } else if ($(this).children(":selected").val() === "vegan") {
+            var input = "<li class='meal'><input type='checkbox' value= '" + i + "'/>" + m3[i] + "<button class='delete-food'><i class='fas fa-times'></i></button></li>";
+
+                $("#meal").append(input);
+
+            }
         
-            $("#meal").append(input);
-        }
+    });
+
+    $(function (){
+    $(".delete-food").on('click', function(){
+        $(this).parent().remove()
     }
-});
-
-
-$("#block").draggable();
-
-
-
-$("#draggable").draggable();
-
-$("#droppable").droppable({
-   
-    drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          
-    }
-
+    )
+    })
 })
+    
+    
+
+  $(function () {
+      $("#pantry, #shopping").sortable({
+          connectWith: ".connectedSortable",
+          dropOnEmpty: true
+      }).disableSelection()
+
+
+   function myFunction(){
+    document.getElementById("meal").classList.toggle("show");
+   }
+
+   window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("list-group");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
 
 });

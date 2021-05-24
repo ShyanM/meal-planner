@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="public">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -35,33 +37,34 @@
     <section class="section2">
         <div class="main_page">
 
+            <h4>Please choose your dietary preference:</h4>
+
             <div class="diet_choice">
-                <div class="row justify-content-center">
-                    <select name="dChoice" id="dChoice" class="dChoice">
-                        <option value=""></option>
-                        <option value="omnivore">Omnivore</option>
-                        <option value="vegiterian">Vegiterian</option>
-                        <option value="vegan">Vegan</option>
-                    </select>
-                </div>
+
+                <select name="dChoice" id="dChoice" class="dChoice">
+                    <option value=""></option>
+                    <option value="omnivore">Omnivore</option>
+                    <option value="vegiterian">Vegiterian</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+
             </div>
 
 
 
-
-            <div class="card-deck" id="section2">
+            <div class="card-deck">
                 <div class="card pantry">
                     <div class="card-header">Pantry</div>
                     <!--scroll effect from https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap-->
-                    <ul class="list-group block" id="pantry">
-                        
+                    <ul class="list-group connectedSortable" id="pantry">
+
                     </ul>
                 </div>
                 <div class="card shopping">
                     <div class="card-header">Shopping</div>
-                    <ul class="shoppingList"></ul>
-                    <form class="js-form ui-widget-header" id="droppable">
-                        <input type="text" aria-label="Enter a new food" placeholder="add new food item"
+                    <ul class="shoppingList connectedSortable" id="shopping"></ul>
+                    <form class="js-form">
+                        <input autofocus type="text" aria-label="Add new item" placeholder="eg. spinach"
                             class="newFoodInput">
                     </form>
 
@@ -70,48 +73,52 @@
                 <div class="card meals">
                     <div class="card-header">Meals</div>
                     <ul class="list-group" id="meal">
-                        
+
                     </ul>
                 </div>
 
             </div>
 
             <!--table using bootstrap - https://getbootstrap.com/docs/4.0/content/tables/ -->
+            <div class="container">
+                <table class="table calendar">
+                    <tbody>
+                        <tr>
+                            <th>Monday</th>
+                            <td><div class="dropdown"> 
+                                <button class="dropbtn">Dropdown</button>
+                            </div></td>
+                        </tr>
 
-            <table class="table calendar">
-                <tbody>
-                    <tr>
-                        <th>Monday</th>
-                        <td>Example</td>
-                    </tr>
+                        <tr>
+                            <th>Tuesday</th>
+                            <td></td>
+                        </tr>
+                        <tr>
 
-                    <tr>
-                        <th>Tuesday</th>
-                        <td>Example</td>
-                    </tr>
-                    <tr>
+                            <th>Wednesday</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Thursday</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Friday</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Saturday</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sunday</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                        <th>Wednesday</th>
-                        <td>Example</td>
-                    </tr>
-                    <tr>
-                        <th>Thursday</th>
-                        <td>Example</td>
-                    </tr>
-                    <tr>
-                        <th>Friday</th>
-                        <td>Example</td>
-                    </tr>
-                    <tr>
-                        <th>Saturday</th>
-                        <td>Example</td>
-                    </tr>
-                    <tr>
-                        <th>Sunday</th>
-                        <td>Example</td>
-                    </tr>
-                </tbody>
-            </table>
+            </div>
 
             <div class="btn"></div>
         </div>
@@ -122,8 +129,9 @@
     </footer>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="   crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/website.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/js/website.js"></script>
 
 </body>
 

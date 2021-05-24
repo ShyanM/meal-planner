@@ -6,8 +6,8 @@ body, html {
 
 body {
     background-color: #002b3d !important;
-    font-family: 'Gothic A1', sans-serif;
-    color: whitesmoke;
+    font-family: 'Gothic A1', sans-serif !important;
+    color: whitesmoke !important;
 }
 .section1 {
     height: 100%;
@@ -15,7 +15,6 @@ body {
 
 a {
     color: whitesmoke !important;
-    text-decoration: inherit;
     
 }
 
@@ -57,28 +56,37 @@ a :hover {
 
 .section2 {
     background-image: url(images/oranges-blue.jpeg);
-    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: scroll;
+}
+
+.main_page {
+    height: 100%;
+}
+
+h4 {
+    text-align: center;
+    padding: 20px;
+}
+
+.diet_choice {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .dChoice {
     height: 50px;
-    position: absolute;
-    top: 105%;
     width: 95%;
-    background-color: rgba(214, 243, 255, 0.5);
+    background-color: rgba(246, 191, 162, 0.5);
     color: white;
     
 }
 
 .card-deck {
-    width: 95% !important;
-    left: 2.5%;
-    bottom: -50%;
-    position: absolute;
+    position: relative;
+    padding: 15px;
 }
 
 .card-header {
@@ -94,15 +102,14 @@ a :hover {
 }
 
 .table {
-    left: 10%;
-    bottom: -98%;
-    position: absolute;
-    width: 80% !important;
+    position: relative;
+    padding: 30px;
+    
 }
 
 
 .calendar {
-    background-color: rgba(214, 243, 255, 0.5);
+    background-color: rgba(246, 191, 162, 0.5);
     padding: 20px;
 }
 
@@ -117,7 +124,7 @@ ul {
 
 .list-group {
     max-height: 300px;
-    overflow-y: scroll ;
+    overflow-y: auto ;
 }
 
 input {
@@ -125,6 +132,30 @@ input {
     width: 100%;
 }
 
+input[type=checkbox] {
+    width: auto;
+
+}
+
+/* cursor change */
+
+li:hover {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+li:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.delete-food {
+    border-style: hidden;
+    background-color: transparent;
+}
 
 @media only screen  and (min-width: 1224px) {
     .card-deck {
